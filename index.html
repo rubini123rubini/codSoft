@@ -2,214 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>MY PORTFOLIO</title>
-
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <link rel="stylesheet"
- href="style.css"</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SIMPLE CALCULATOR</title>
+</head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">portfolio</a>
-        <i class='bx bx-menu' id="menu"></i>
-        <nav class="na">
-            <a href="#about" class="h">ABOUT</a>
-            <a href="#skill" >SKILLS</a>
-            <a href="#project">MY PROJECTS</a>
-            <a href="#certificates">CERTIFICATES</a>
-            <a href="#content"> CONTACT</a>
-        </nav>
-    </header>
-
-
-    <section class="about" id="about">
-        <div class="ab">
-            <h1>Hello Everyone, I am <h4>Rubini</h4></h1>
-            <p > <h4>I am a software <span class="mmm" ></span> </h4> <h2>I am pursuving my gratuate in einstein college of engineering , thirunelveli.My department is Computer Science and Engineering. I am a self modivated person.I have excited to learn more new things.</h2></p>
-            <div class="social">
-                <a href="mail"><i class='bx bxs-envelope' ></i></a>
-                <a href="what">  <i class='bx bxl-whatsapp-square' ></i></a>
-                <a href="twit"><i class='bx bxl-twitter' ></i></a>
-                <a href="https://www.linkedin.com/in/rubini-s-250311299/"><i  class='bx bxl-linkedin-square' ></i></a>
-            </div>
-        </div>
-<div class="im">
-    <img src="images/me.jpg" alt="im">
-</div>
-    </section>
-<!-- skills start-->
-
-<section class="skill" id="skill">
-    <div class="tit">
-        <h3>SKILLS</h3>
-        <div>my skills</div>
-    </div>
-    <p class="para">
-        
-       <h2> These are the skills that i have built myself till now.</h2>
-    </p>
-    <div class="row">
-        <div class="it">
-            <div class="it1">
-                <span>HTML</span>
-                <span class="s" >90%</span>
-            </div>
-            <div class="progress">
-                <div class="p1"></div>
-            </div>
-        </div>
-
-        <div class="it">
-            <div class="it1">
-                <span>CSS</span>
-                <span class="s2" >75%</span>
-            </div>
-            <div class="progress">
-                <div class="p2"></div>
-            </div>
-        </div>
-        <div class="it">
-            <div class="it1">
-                <span>PHP</span>
-                <span class="s5" >20%</span>
-            </div>
-            <div class="progress">
-                <div class="p5"></div>
-            </div>
-            </div>
-        <div class="it">
-            <div class="it1">
-                <span>javascript</span>
-                <span class="s3" >50%</span>
-            </div>
-            <div class="progress">
-                <div class="p3"></div>
-            </div>
-        </div>
-        <div class="it">
-            <div class="it1">
-                <span>Advanced java programming language</span>
-                <span class="s4" >40%</span>
-            </div>
-            <div class="progress">
-                <div class="p4"></div>
-            </div>
-        </div>
+    <div class="c1">
+       <div class="calci">
+        <input type="text" placeholder="0" id="output">
+        <button onclick="clears()">clr</button>
+        <button onclick="dele()">del</button>
+        <button onclick="show('%')">%</button>
+        <button onclick="show('/')">/</button>
+        <button onclick="show('7')">7</button>
+        <button onclick="show ('8')">8</button>
+        <button onclick="show('9')">9</button>
+        <button onclick="show('*')">*</button>
+        <button onclick="show('4')">4</button>
+        <button onclick="show('5')">5</button>
+        <button onclick="show('6')">6</button>
+        <button onclick="show('-')">-</button>
+        <button onclick="show('1')">1</button>
+        <button onclick="show('2')">2</button>
+        <button onclick="show('3')">3</button>
+        <button onclick="show('+')">+</button>
+        <button onclick="show('.')">.</button>
+        <button onclick="show('0')">0</button>
+        <button onclick="Enter()" class="calculate">=</button>
+       </div> 
     </div>
 
-</section>
-<!-- skill end-->
+    <script>
+        let output = document.getElementById("output");
 
+        function show(number){
+            output.value += number;
+        }
 
-<!--project start-->
-<section class="project" id="project">
-    <h2 class="heading">MY <span>PROJECTS</span></h2>
-    <div class="myprojects">
-        <div class="pro1">
-            <img src="images/images.jpg" alt="im1">
-        <div class="layer1">
-            <h5>CURRENCY CONVERTOR</h5>
-            <p>converting the given currencies using Advanced java programming language</p>
-            <a href="#"><i class='bx bx-link-external'></i></a>
-        </div>
-        </div>
+        function Enter(){
+            try {
+                output.value = eval(output.value);
+            } catch (error) {
+                alert("Please enter the valid value");
+            }
+        }
 
-        <div class="pro1">
-            <img src="images/img2.png" alt="im1">
-        <div class="layer1">
-            <h5>SIMPLE LANDING PAGE</h5>
-            <p>I have created My first landing page of CodSoft Internship in free time.</p>
-            <a href="#"><i class='bx bx-link-external'></i></a>
-        </div>
-        </div>
-
-        <div class="pro1">
-            <img src="images/img3.png" alt="im1">
-        <div class="layer1">
-            <h5>BUS RESERVATION SYSTEM</h5>
-            <p>online bus ticket booking system using java as frontend and MySQL as backend.</p>
-            <a href="#"><i class='bx bx-link-external'></i></a>
-        </div>
-        </div>
-
-    </div>
-
-</section>
-<!--project end-->
-<!--cerrtificates-->
-<section class="certificates" id="certificates">
-    <h2 class="heading">MY <span>CERTIFICATES</span></h2>
-    <div class="certi">
-        <div class="c1"> 
-            <img src="images/html.jpg">
-            </div>
-           
-            
-                <div class="c1"> 
-                    <img src="images/css.jpg">
-                    </div>
-                    
-                    
-                        <div class="c1"> 
-                            <img src="images/javascript.jpg">
-                            </div>
-                            <div class="c1"> 
-                                <img src="images/IMG_20240404_195909.jpg">
-                                </div>
-                            
-                            <div class="c1"> 
-                                <img src="images/IMG_20240404_195949.jpg">
-                                </div>
-                           
-                            <div class="c1"> 
-                                <img src="images/IMG_20240404_200021.jpg">
-                                </div>
-                          
-                        </div>
-                        
-                           
-</section>
-<!--certificates end-->
-
-
-<!--content-->
-<section class="content" id="content">
-    <h2 class="heading"><span>CONTACT</span> ME!</h2>
-    <form action="#">
-        <div class="in">
-            <input type="text" placeholder="enter your name">
-            <input type="email" placeholder="Enter your mail">
-        </div>
-        <div class="in">
-            <input type="number" placeholder="enter mobile number">
-            <input type="text" placeholder="Enter mail subject">
-        </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="
-        give your description here">
-    </textarea>
-        <input type="submit" value="SEND" class="btt">
-
-    </form>
-</section>
-<!--foot-->
-<footer class="foot">
-    <div class="foot1">
-        <p>rubini123@gmail.com</p>
-    </div>
-    <div class="ic">
-        <a href="#about"><i class='bx bx-up-arrow-alt' ></i></a>
-    </div>
-</footer>
-<!--end foot-->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-<script src="java.js">
-
-</script>
-
+        function clears(){
+            output.value = "";
+        }
+        function dele(){
+            output.value = output.value.slice(0,-1);
+        }
+    </script>
+    
 </body>
 </html>
